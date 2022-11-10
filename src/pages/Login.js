@@ -50,7 +50,7 @@ const Login = (props) => {
          
     }).catch((err) =>{ console.log(err.response.data)
       props.stop_loading()
-      fail_notify("Something Went Wrong !",4000)
+      fail_notify(err.response.data.message,4000)
       navigate("/");
      
     })
