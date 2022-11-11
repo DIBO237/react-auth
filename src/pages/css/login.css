@@ -1,0 +1,101 @@
+.loginDiv{
+    max-width: 500px;
+    padding: 50px;
+}
+
+.formCol{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+   
+   
+    
+}
+
+.flexing{
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-shrink: 0;                  /*  added  */
+    flex-grow: 5; 
+}
+
+.fieldss{
+    background: #F7F7F9;
+    border-radius: 6px;  
+    
+}
+
+.field-label{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+
+/* Gray / ultradark */
+color: #515458;
+
+
+}
+
+.button-custom {
+    background: #00006B;
+border: 1px solid #00006B;
+border-radius: 8px;
+}
+
+.bottom-text{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+/* identical to box height */
+text-align: center;
+
+/* Text Secondary */
+color: #575757;
+}
+
+.head-text{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 64px;
+}
+
+.icons-bottom{
+    color: white;
+    display: flex;
+    justify-content:center;
+
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+
+}
+
+.header_div{
+    display: flex;
+justify-content: center;
+}
+
+.headders {
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 32px;
+
+/* identical to box height, or 114% */
+text-align: center;
+
+color: #17181A;
+}

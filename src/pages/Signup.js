@@ -1,8 +1,8 @@
 
 
 import React, { useState,useContext } from 'react';
-
-import { Form, Button } from 'react-bootstrap';
+import "./css/login.css"
+import { Form, Button,Col,Row } from 'react-bootstrap';
 import { authContext } from '../utils/AuthContext';
 import { Navigate, Outlet,useNavigate ,Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -83,76 +83,148 @@ const Signup = () => {
     // we will change it later;
   };
   return (
-    <div
-      style={{ height: "100vh" }}
-      className="d-flex justify-content-center align-items-center"
-    >
-      <div style={{ width: 300 }}>
-        <h1 className="text-center">Sign Up</h1>
-        <Form onSubmit={onFormSubmit}>
-        <Form.Group>
-            <Form.Label>Full Name</Form.Label>
+
+    <div>
+    <Row>
+      <Col    style={{  height:"900px"  }}>
+        <div className="" style={{ backgroundColor: "#00006B" ,padding:10 ,height:"100%" }}>
+          <div className="mb-5 text-center" style={{ padding: 50}}>
+            <img
+              className="img-fluid"
+              src="/assets/E-Wallet.gif"
+              style={{ width: 300 }}
+            />
+          </div>
+          <div className="text-left mb-5 container header_div"  >
+          
+              <div>
+              <h1 className="head-text" style={{color:"white"}}>Hey,<br></br> Welcome back<br></br>  to Payinstacard!</h1>
+              </div>
+            
+           
+            
+          </div>
+           <div>
+             <Row className="">
+               <Col md={4} xl={4} lg={4} sm={4} xs={4} className="mb-2">
+                <div className="icons-bottom">
+                <img src="/assets/img1.png" />
+                <p className="mt-2 ml-2" style={{marginLeft:10}}>Secure</p>
+                </div>
+                  
+               </Col>
+               <Col md={4} xl={4} lg={4} sm={4} xs={4} className="mb-2">
+                <div className="icons-bottom">
+                <img src="/assets/img3.png" />
+                <p className="mt-2 ml-2" style={{marginLeft:10}}>Instant</p>
+                </div>
+                  
+               </Col>
+             
+               <Col md={4} xl={4} lg={4} sm={4} xs={4} className="mb-2">
+                <div className="icons-bottom">
+                <img src="/assets/img2.png" />
+                <p className="mt-2" style={{marginLeft:10}}>Simple</p>
+                </div>
+                  
+               </Col>
+             
+
+             
+               
+             </Row>
+           </div>
+        </div>
+      </Col>
+      <Col className="formCol "  >
+        <div className="loginDiv" style={{}}>
+       
+        <div className="" >
+        <div className="text-center">
+             <img className="mb-2" src="/assets/payinsta-logo.png" />
+             <div className="headders">
+               <h2 className="headders">Signup</h2>
+             </div>
+
+          </div>
+          <Form onSubmit={onFormSubmit}>
+        <Form.Group className='mb-3'>
+            <Form.Label className="field-label">Full Name</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter your name"
               onChange={e => {
                 setName(e.target.value);
               }}
+              className="fieldss"
             />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Email address</Form.Label>
+          </Form.Group >
+          <Form.Group className='mb-3'>
+            <Form.Label className="field-label">Email address</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
               onChange={e => {
                 setEmail(e.target.value);
               }}
+              className="fieldss"
             />
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label>Mobile Number</Form.Label>
+          <Form.Group className='mb-3'>
+            <Form.Label className="field-label">Mobile Number</Form.Label>
             <Form.Control
               type="phone"
               placeholder="Enter Mobile Number"
               onChange={e => {
                 setMobile(e.target.value);
               }}
+              className="fieldss"
             />
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label>Password</Form.Label>
+          <Form.Group className='mb-3'>
+            <Form.Label className="field-label">Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Password"
               onChange={e => {
                 setPassword(e.target.value);
               }}
+              className="fieldss"
             />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Confirm password</Form.Label>
+          </Form.Group >
+          <Form.Group className='mb-3'>
+            <Form.Label className="field-label">Confirm password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Confirm Password"
               onChange={e => {
                 setConfirm_Password(e.target.value);
               }}
+              className="fieldss"
             />
           </Form.Group>
-          <p>Have an account ? <Link to="/login">Login here</Link></p>
+          
           <Button
             variant="primary"
             type="submit"
-            className="w-100 mt-3"
+            className="w-100 mt-3 mb-3"
+            style={{backgroundColor:"#00006B" }}
           >
             Sign in
           </Button>
+          <p className="bottom-text ">Have an account ? <Link to="/login">Login here</Link></p>
         </Form>
-      </div>
-    </div>
+        </div>
+        </div>
+        
+      </Col>
+    </Row>
+  </div>
+   
+       
+  
   );
 };
 
