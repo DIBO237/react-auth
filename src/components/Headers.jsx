@@ -28,7 +28,7 @@ function Headers(props) {
             
             <Nav className="me-auto">
             <Nav.Link href="/" >Home</Nav.Link>
-            <Nav.Link href="transactions">Transactions</Nav.Link>
+            <Nav.Link href="/transactions">Transactions</Nav.Link>
            
             
           </Nav>
