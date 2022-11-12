@@ -1,0 +1,48 @@
+.shop-cards{
+    background: linear-gradient(128.94deg, #D3E6F7 39.4%, #D3E6F7 100%);
+box-shadow: 1px 1px 10px rgba(226, 226, 226, 0.5);
+border-radius: 10px;
+padding: 20px;
+border-color: transparent;
+}
+
+.shop-font{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    
+    /* identical to box height */
+   
+    
+    color: #000000;
+    
+    
+}
+
+
+.shop-rent{
+    background: linear-gradient(128.94deg, #EFF7D3 39.4%, #EFF7D3 100%);
+box-shadow: 1px 1px 10px rgba(226, 226, 226, 0.5);
+border-radius: 10px;
+padding: 20px;
+border-color: transparent;
+}
+
+.school-front{
+    background: linear-gradient(128.94deg, #F7E4D3 39.4%, #F7E4D3 100%);
+box-shadow: 1px 1px 10px rgba(226, 226, 226, 0.5);
+border-radius: 10px;
+padding: 20px;
+border-color: transparent;
+
+}
+
+.society-rent{
+    background: linear-gradient(128.94deg, #FFF5B7 39.4%, #FFF5B7 100%);
+box-shadow: 1px 1px 10px rgba(226, 226, 226, 0.5);
+border-radius: 10px;
+padding: 20px;
+border-color: transparent;
+}

@@ -78,7 +78,7 @@ useEffect(()=>{
   return (
 
 
-    <div className="container mb-5">  <DataTable
+    <div className="container mt-5 mb-5">  <DataTable
     direction="auto"
     fixedHeaderScrollHeight="300px"
     pagination

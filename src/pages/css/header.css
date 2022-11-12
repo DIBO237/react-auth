@@ -1,0 +1,30 @@
+.back{
+    background: #FFFFFF;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.08);
+    font-family: 'Lato';
+
+}
+
+.headder-font{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    
+    /* identical to box height */
+    
+    color: #000000;
+}
+
+.headder-font :hover{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    
+    /* identical to box height */
+    
+    color: #616060;
+}
