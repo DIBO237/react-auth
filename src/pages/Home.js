@@ -70,7 +70,7 @@ const Home = (props) => {
     </Card>
       </Col>
        {/* ________ */}
-      <Col  sm={12} lg={4} xl={4} md={6} style={{padding:20}}> 
+      <Col  sm={12} lg={4} xl={4} md={6} className="mx-auto" style={{padding:20}}> 
       <Card className='school-front' style={{ width: '100%' }}>
       <div className='text-center'>
         <Card.Img  variant="top" src="/assets/satellite-dish 2.svg" style={{width:80}} />

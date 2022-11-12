@@ -1,0 +1,113 @@
+.forms{
+    background: #FFFFFF;
+box-shadow: 6px 6px 60px rgba(0, 0, 107, 0.08);
+border-radius: 10px;
+padding: 20px;
+max-width:600px ;
+margin: auto;
+
+}
+
+.head-font{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+color: #525252;
+
+
+}
+
+.mid-font{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+color: #525252;
+}
+
+form .form-field {
+    
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(197, 194, 194);
+    outline: 0;
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 0.9rem;
+line-height: 19px;
+color: #000000;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    border-radius: 0;
+    padding: 10px;
+    
+  
+  }
+
+  form .form-control:focus{
+    border-color: #ced4da;
+    box-shadow: none;
+  }
+
+  .amount-bar{
+    background: #FFFFFF;
+box-shadow: 6px 6px 60px rgba(0, 0, 107, 0.08);
+border-radius: 10px;
+ padding: 20px;
+  }
+
+  .hide-field{
+   
+        position: absolute;
+        font-size: 50px;
+        opacity: 0;
+        right: 0;
+        top: 0;
+      
+  }
+
+  .file-uploads{
+    
+background: #F8F8FF;
+border: 0.932084px dashed rgba(14, 60, 110, 0.3);
+border-radius: 10px;
+padding: 20px;
+text-align: center;
+  }
+
+
+  .upload-head{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 22px;
+ color: #0F0F0F;
+  }
+  .upload-text-small{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 17px;
+  }
+
+  .buttons{
+    background: #00006B;
+border: 1px solid #00006B;
+border-radius: 8px;
+  }
+
+  .checksBox{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+
+color: #000000;
+  }

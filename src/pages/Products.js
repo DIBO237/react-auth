@@ -5,6 +5,8 @@ import _ from "lodash";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { success_notify,fail_notify, numberWithCommas } from "../utils/Utilfunctions";
+import "./css/products.css"
+
 
 const Products = () => {
   const formEl = useRef();
@@ -224,50 +226,79 @@ const Products = () => {
   }, []);
 
   return (
-    <Container style={{ maxWidth: 500 }}>
-      <h2>{name.toLocaleUpperCase()}</h2>
+    <Container fluid>
+      
+       
+       <Row>
+        <Col xl={6} md={6} lg={6} sm={12} xs={12} style={{backgroundColor:"",padding:40}}>
+            {/* FRIST FROM STARTS HERE STEP 1 */}
+            <div className="forms">
+            <h2 className="head-font text-center">{name.toLocaleUpperCase()}</h2>
+           
 
-      {/* FRIST FROM STARTS HERE STEP 1 */}
+           <div className="mx-auto" style={{maxWidth:500,backgroundColor:"#F8F8FF",borderRadius:10,padding:20}}>
+
+           <div>
+             <h3 className="head-font">Enter Details</h3>
+           </div>
+           
       {changeform === 1 ? (
-        <div className="mt-5">
+        <div className="mt-3">
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
+              <Form.Label className="mid-font">Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter your name"
                 onChange={handleChange}
                 name="name"
+                className="form-field"
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Mobile Number</Form.Label>
+              <Form.Label className="mid-font">Mobile Number</Form.Label>
               <Form.Control
                 type="tel"
                 placeholder="Enter your phone number"
                 onChange={handleChange}
                 name="mobile"
+                className="form-field"
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Additional Documents {"(optional)"}</Form.Label>
-              <Form.Control type="file" placeholder="Enter your name" />
+              <Form.Label className="mid-font">Additional Documents {"(optional)"}</Form.Label>
+              <diV className="file file-uploads"  >
+                <div>
+                   <img src="/assets/Group.svg"/>
+                  </div>
+                  <div>
+                    <h5 className="upload-head">Upload Rental agreement</h5>
+                    <p className="upload-text-small">Supported formates: JPEG, PNG, PDF, File size no more than 10MB</p>
+                  </div>
+              <Form.Control className="hide-field" type="file" placeholder="Enter your name" />
+              </diV>
+              
             </Form.Group>
-
-            <Button
-              variant="primary"
+             <div className="text-center">
+             <Button
+              
               type="submit"
               onClick={(e) => handleSubmit(e)}
+              style={{ backgroundColor:"#00006B"}}
+              className="px-5"
             >
-              MAKE PAYMENT
+              NEXT
             </Button>
+             </div>
+           
           </Form>
         </div>
       ) : (
         // SECOND FROM STARTS HERE STEP 2
-        <div className="mt-5">
+        <div className="mt-5 ">
           {/* RADIO BUTTONS FORM PAYMENT METHOD */}
-          <Form.Group>
+          <Form.Group className="mx-auto">
+            
             <Form.Check
               type="radio"
               aria-label="radio 1"
@@ -275,6 +306,7 @@ const Products = () => {
               label="Bank Transfer"
               onChange={() => setMethod(1)}
               checked={methodChange === 1}
+              className="checksBox"
             />
             <Form.Check
               type="radio"
@@ -283,6 +315,7 @@ const Products = () => {
               label="UPI Payment"
               onChange={() => setMethod(2)}
               checked={methodChange === 2}
+              className="checksBox"
             />
           </Form.Group>
 
@@ -292,35 +325,38 @@ const Products = () => {
               {methodChange === 1 ? (
                 <div>
                   <Form.Group className="mb-3">
-                    <Form.Label>IFSC CODE</Form.Label>
+                    <Form.Label className="mid-font">IFSC CODE</Form.Label>
                     <Form.Control
                       type="text"
                       name="ifsc"
                       placeholder="Enter ifsc code"
                       onChange={(e) => setIfsc(e.target.value)}
                       value={ifsc}
+                      className="form-field"
                     ></Form.Control>
                   </Form.Group>
 
                   <Form.Group className="mb-3">
-                    <Form.Label>A/c Number</Form.Label>
+                    <Form.Label className="mid-font">A/c Number</Form.Label>
                     <Form.Control
                       type="text"
                       name="acNumber"
                       placeholder="Enter Bank account number"
                       onChange={(e) => setAcnumber(e.target.value)}
                       value={acNumber}
+                      className="form-field"
                     ></Form.Control>
                   </Form.Group>
 
                   <Form.Group className="mb-3">
-                    <Form.Label>A/c Holder Name</Form.Label>
+                    <Form.Label className="mid-font">A/c Holder Name</Form.Label>
                     <Form.Control
                       type="text"
                       name="acName"
                       placeholder="Enter Account holder name"
                       onChange={(e) => setAcname(e.target.value)}
                       value={acName}
+                      className="form-field"
                     ></Form.Control>
                   </Form.Group>
                 </div>
@@ -328,30 +364,32 @@ const Products = () => {
                 // UPI TRANSFER
                 <div>
                   <Form.Group className="mb-3">
-                    <Form.Label>Enter UPI ID</Form.Label>
+                    <Form.Label className="mid-font">Enter UPI ID</Form.Label>
                     <Form.Control
                       type="text"
                       name="upi-id"
                       placeholder="Enter UPI id here"
                       onChange={(e) => setUpid(e.target.value)}
                       value={upid}
+                      className="form-field"
                     ></Form.Control>
                   </Form.Group>
                   <Form.Group className="mb-3">
-                    <Form.Label>Enter UPI Holder name</Form.Label>
+                    <Form.Label className="mid-font">Enter UPI Holder name</Form.Label>
                     <Form.Control
                       type="text"
                       name="upi-id"
                       placeholder="Enter UPI Holder name here"
                       onChange={(e) => setUpiname(e.target.value)}
                       value={upiName}
+                      className="form-field"
                     ></Form.Control>
                   </Form.Group>
                 </div>
               )}
 
               <Form.Group className="mb-3">
-                <Form.Label>Enter Amount</Form.Label>
+                <Form.Label className="mid-font">Enter Amount</Form.Label>
                 <Form.Control
                   type="number"
                   name="amount"
@@ -359,8 +397,10 @@ const Products = () => {
                   onChange={(e) => AmountHandle(e.target.value)}
                   max={50000}
                   value={amount}
+                  className="form-field"
                 ></Form.Control>
               </Form.Group>
+              <div className="text-center"> 
               <Button
                 variant="primary px-5"
                 type="submit"
@@ -369,30 +409,70 @@ const Products = () => {
                     ? (e) => paymentBank(e)
                     : (e) => paymentUpi(e)
                 }
+                style={{ backgroundColor:"#00006B"}}
+                className="px-5"
               >
                 PAY
               </Button>
+
+              </div>
+             
             </Form>
           </div>
         </div>
-      )}
-
-       {/* AMOUNT CALCULATION FORM */}
-      <div className="mt-5" style={{ backgroundColor: " #eeeeee "  }}>
-        <Row className="py-3 px-5">
+      )} </div></div>
          
-        <Col xs={6} sm={6} md={6} lg={6} >Amount:</Col>
-          <Col xs={6} sm={6} md={6} lg={6} >Rs.{amount ?  parseInt(amount): 0}</Col>
-          <Col xs={6} sm={6} md={6} lg={6} >Convinence Fees {'(2%):'}</Col>
-          <Col xs={6} sm={6} md={6} lg={6} >Rs.{convienceFee}</Col>
+        </Col>
+        <Col xl={6} md={6} lg={6} sm={12} xs={12} className="mx-auto" style={{backgroundColor:"",padding:40}}>
+          {/* AMOUNT CALCULATION FORM */}
+          <div className="amount-bar" style={{maxWidth:500}}>
+
+          
+      <div className="" style={{ backgroundColor: " #F8F8FF " ,borderRadius:10 ,padding:10,maxWidth:500}}>
+        <h3 className="head-font">Payment Details</h3>
+       <div style={{padding:10}}> 
+       <div style={{display:"flex", justifyContent:"space-between"}}>
+          <div className="mid-font">Amount:</div>
+          <div className="mid-font">Rs.{amount ?  parseInt(amount): 0}</div>
+        </div>
+        <div style={{display:"flex", justifyContent:"space-between"}}>
+          <div className="mid-font">Convinence Fees {'(2%)'}:</div>
+          <div className="mid-font">Rs.{convienceFee}</div>
+        </div>
+        <hr></hr>
+        <div style={{display:"flex", justifyContent:"space-between"}}>
+          <div className="mid-font">Total amount:</div>
+          <div className="mid-font">Rs.{amount ? parseInt(convienceFee )+ parseInt(amount): 0}</div>
+        </div>
+
+       </div>
+        
+        {/* <Row className="py-3 px-5">
+
+
+         
+        <Col xs={6} sm={6} md={6} lg={6} className="ml-auto" ><div>Amount:</div></Col>
+          <Col xs={6} sm={6} md={6} lg={6}  className="mx-auto">Rs.{amount ?  parseInt(amount): 0}</Col>
+          <Col xs={6} sm={6} md={6} lg={6} className="mx-auto">Convinence Fees {'(2%):'}</Col>
+          <Col xs={6} sm={6} md={6} lg={6} className="mx-auto">Rs.{convienceFee}</Col>
           <hr className="mt-3"></hr>
-          <Col xs={6} sm={6} md={6} lg={6} >Total amount:</Col>
-          <Col xs={6} sm={6} md={6} lg={6} >Rs.{amount ? parseInt(convienceFee )+ parseInt(amount): 0}</Col>
+          <Col xs={6} sm={6} md={6} lg={6} className="mr-auto">Total amount:</Col>
+          <Col xs={6} sm={6} md={6} lg={6} className="mx-auto">Rs.{amount ? parseInt(convienceFee )+ parseInt(amount): 0}</Col>
 
           
         </Row>
-      </div>
+        <div style={{display:"flex", justifyContent:"space-evenly"}}>
+          <div>sdsds</div>
+          <div>sdsds</div>
+        </div> */}
+      </div></div>
 
+         
+         </Col>
+       </Row>
+    
+
+       
       <div>
         {userData ? (
           <Form
