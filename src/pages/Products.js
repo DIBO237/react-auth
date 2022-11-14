@@ -482,8 +482,8 @@ const Products = () => {
             ref={formEl}
             id="x1"
             method="POST"
-            //action="https://payinsta-api.herokuapp.com/paynow"
-            action="http://localhost:4000/paynow"
+            action="https://payinsta-api.herokuapp.com/paynow"
+            //action="http://localhost:4000/paynow"
           >
             <input type="text" name="id" value={userData.id}></input>
             <input type="text" name="name" value={userData.name}></input>
