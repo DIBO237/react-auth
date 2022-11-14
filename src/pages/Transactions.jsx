@@ -39,8 +39,13 @@ const columns = [
     },
 
     {
-        name: 'Status',
+        name: 'Payment Status',
         selector: row => row.payment_status,
+        sortable: true,
+    },
+    {
+        name: 'Setelment Status',
+        selector: row => row.settlement_status,
         sortable: true,
     },
 ];

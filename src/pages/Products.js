@@ -245,6 +245,18 @@ const Products = () => {
       {changeform === 1 ? (
         <div className="mt-3">
           <Form>
+          <Form.Group className="mb-3">
+                <Form.Label className="mid-font">Enter Amount</Form.Label>
+                <Form.Control
+                  type="number"
+                  name="amount"
+                  placeholder="Enter Your amount"
+                  onChange={(e) => AmountHandle(e.target.value)}
+                  max={50000}
+                  value={amount}
+                  className="form-field"
+                ></Form.Control>
+              </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className="mid-font">Name</Form.Label>
               <Form.Control
@@ -388,18 +400,7 @@ const Products = () => {
                 </div>
               )}
 
-              <Form.Group className="mb-3">
-                <Form.Label className="mid-font">Enter Amount</Form.Label>
-                <Form.Control
-                  type="number"
-                  name="amount"
-                  placeholder="Enter Your amount"
-                  onChange={(e) => AmountHandle(e.target.value)}
-                  max={50000}
-                  value={amount}
-                  className="form-field"
-                ></Form.Control>
-              </Form.Group>
+             
               <div className="text-center"> 
               <Button
                 variant="primary px-5"
@@ -481,7 +482,8 @@ const Products = () => {
             ref={formEl}
             id="x1"
             method="POST"
-            action="https://payinsta-api.herokuapp.com/paynow"
+            //action="https://payinsta-api.herokuapp.com/paynow"
+            action="http://localhost:4000/paynow"
           >
             <input type="text" name="id" value={userData.id}></input>
             <input type="text" name="name" value={userData.name}></input>

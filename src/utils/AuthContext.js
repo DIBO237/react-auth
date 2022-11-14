@@ -6,7 +6,7 @@ import { start_loader, stop_loader } from '../Redux/Actions'
 import { store_token,get_data } from '../Redux/Reducers';
 import { connect } from 'react-redux';
 import Headers from '../components/Headers';
-
+import Footer from '../components/Footer';
 
 export const authContext = createContext({});
 
@@ -63,6 +63,10 @@ const AuthProvider = ({ children }) => {
        
       </>
       {children}
+      <>
+      {auth.token ? <Footer />:<></>}
+       
+      </>
     </authContext.Provider>
   );
 };
